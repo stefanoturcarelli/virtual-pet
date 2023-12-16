@@ -46,6 +46,8 @@
 
 .dark {
   background-image: url(../media/img/night.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .hidden {
