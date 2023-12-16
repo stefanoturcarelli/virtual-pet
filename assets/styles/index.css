@@ -41,7 +41,15 @@
   display: grid;
   place-items: center;
   border-radius: 0.5rem;
-  background-image: url(../media/img/background-1.png);
+  /* background-image: url(../media/img/background-1.png); */
+}
+
+.dark {
+  background-image: url(../media/img/night.png);
+}
+
+.hidden {
+  opacity: 0;
 }
 
 .pet-container img {
