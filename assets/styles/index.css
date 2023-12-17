@@ -66,6 +66,25 @@
 .stats-container {
   visibility: hidden;
   position: absolute;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+
+.stats-container h2 {
+  font-size: 5rem;
+  padding-bottom: 2rem;
+}
+
+.stats-container p {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.stats-container span {
+  font-size: 3rem;
+  font-weight: 500;
+  padding-left: 1rem;
 }
 
 .visible {
