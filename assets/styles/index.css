@@ -60,10 +60,12 @@
 
 .pet-container img {
   width: 250px;
+  mix-blend-mode: multiply;
 }
 
 .stats-container {
   visibility: hidden;
+  position: absolute;
 }
 
 .visible {
