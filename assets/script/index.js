@@ -62,7 +62,7 @@ class Pet {
   }
 }
 
-const pet = new Pet("Zip", 0, 100, 100, 100, 0);
+const pet = new Pet("Zip", 0, 0, 100, 100, 0);
 console.log(pet);
 
 const statsContainer = document.querySelector(".stats-container");
