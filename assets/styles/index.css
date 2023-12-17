@@ -61,3 +61,11 @@
 .pet-container img {
   width: 250px;
 }
+
+.stats-container {
+  visibility: hidden;
+}
+
+.visible {
+  visibility: visible;
+}
