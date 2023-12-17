@@ -50,7 +50,7 @@ class Pet {
   }
 
   goToSleep() {
-    this.sleep = 0;
+    this.sleep += 1;
     this.mood += 1;
     this.health += 1;
   }
@@ -69,14 +69,14 @@ class Pet {
   }
 
   syringe() {
-    this.health = 0;
+    this.health = 100;
     this.hunger += 1;
     this.sleep += 1;
     this.mood += 1;
   }
 }
 
-const pet = new Pet("Zip", 0, 0, 100, 100, 50);
+const pet = new Pet("Zip", 0, 0, 50, 50, 50);
 console.log(pet);
 
 const statsContainer = document.querySelector(".stats-container");
@@ -132,7 +132,7 @@ function hideAllButtonsForSomeSeconds() {
       button.classList.toggle("hidden");
     });
     virtualPet.classList.toggle("hidden");
-  }, 5000);
+  }, 4000);
 }
 
 // ! Event Listeners -----------------------------------------------------------
@@ -145,14 +145,17 @@ buttons.forEach((button) => {
 
 lightBtn.addEventListener("click", () => {
   hideAllButtonsButLight();
+  pet.goToSleep();
 });
 
 syringeBtn.addEventListener("click", () => {
   hideAllButtonsForSomeSeconds();
+  pet.syringe();
 });
 
 toiletBtn.addEventListener("click", () => {
   hideAllButtonsForSomeSeconds();
+  pet.toilet();
 });
 
 chartPieBtn.addEventListener("click", () => {
