@@ -17,6 +17,20 @@ const exclamationBtn = document.querySelector(".exclamation-btn");
 const petContainer = document.querySelector(".pet-container");
 const virtualPet = document.querySelector(".virtual-pet");
 
+// Clock
+const clockDisplay = document.querySelector(".clock-display");
+
+const clock = () => {
+  const date = new Date();
+  const hours = date.getHours().toString().padStart(2, "0");
+  const minutes = date.getMinutes().toString().padStart(2, "0");
+  const seconds = date.getSeconds().toString().padStart(2, "0");
+
+  clockDisplay.innerHTML = `${hours}:${minutes}:${seconds}`;
+};
+
+setInterval(clock, 1000);
+
 // ! Pet -----------------------------------------------------------------------
 
 class Pet {
@@ -62,7 +76,7 @@ class Pet {
   }
 }
 
-const pet = new Pet("Zip", 0, 0, 100, 100, 0);
+const pet = new Pet("Zip", 0, 0, 100, 100, 50);
 console.log(pet);
 
 const statsContainer = document.querySelector(".stats-container");
@@ -71,6 +85,7 @@ const petAgeValue = document.querySelector(".age-value");
 const hungerValue = document.querySelector(".hunger-value");
 const sleepValue = document.querySelector(".sleep-value");
 const moodValue = document.querySelector(".mood-value");
+const healthValue = document.querySelector(".health-value");
 
 function displayPetInformation() {
   statsContainer.classList.toggle("visible");
@@ -79,6 +94,7 @@ function displayPetInformation() {
   hungerValue.textContent = pet.hunger;
   sleepValue.textContent = pet.sleep;
   moodValue.textContent = pet.mood;
+  healthValue.textContent = pet.health;
 }
 
 // ! Functions -----------------------------------------------------------------
@@ -142,4 +158,8 @@ toiletBtn.addEventListener("click", () => {
 chartPieBtn.addEventListener("click", () => {
   hideAllButtonsButChartPie();
   displayPetInformation();
+});
+
+pizzaSliceBtn.addEventListener("click", () => {
+  pet.feed();
 });

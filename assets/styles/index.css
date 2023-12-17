@@ -44,6 +44,7 @@
   background-image: url(../media/img/background-1.png);
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 
 .dark {
@@ -89,4 +90,23 @@
 
 .visible {
   visibility: visible;
+}
+
+.clock-display-bg {
+  padding: 0.5rem;
+  background-color: lightseagreen;
+  border: 2px solid lightseagreen;
+  color: white;
+  border-radius: 0.5rem;
+  width: 78px;
+  text-align: left;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.clock-display {
+  width: 100%;
 }
