@@ -1,5 +1,6 @@
 "use strict";
 
+
 // ! Variables -----------------------------------------------------------------
 
 const click = new Audio("assets/media/sounds/click.mp3");
